@@ -20,8 +20,9 @@ services:
     volumes:
       - acme-challenge:/var/www/certbot:rw
       - certs:/etc/letsencrypt:rw
-      # - ./config/certbot-cli.ini:/etc/letsencrypt/cli.ini:ro
       - ./config/certbot-certs.list:/etc/letsencrypt/certs.list:ro
+      # - ./config/certbot-cli.ini:/root/.config/letsencrypt/cli.ini:ro
+      # - ./config/certbot-cloudflare.ini:/root/.config/letsencrypt/cloudflare.ini:ro
 
 volumes:
   acme-challenge:
