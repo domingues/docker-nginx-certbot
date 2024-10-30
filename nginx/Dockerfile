@@ -1,6 +1,9 @@
-FROM nginx:1.25
+FROM ubuntu/nginx:1.24-24.04_beta
+
+RUN rm /etc/nginx/sites-enabled/default
 
 RUN apt-get update && apt-get install -y \
+    libnginx-mod-http-brotli-filter \
     inotify-tools \
     openssl \
     && rm -rf /var/lib/apt/lists/*
