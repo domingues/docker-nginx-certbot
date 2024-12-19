@@ -1,6 +1,6 @@
 # Docker NGINX Certbot
 
-Simple Compose with NGINX server and SSL certificates auto renewed with Certbot.
+Simple Compose with NGINX server and SSL certificates auto-renewed with Certbot.
 
 ## Usage
 
@@ -17,7 +17,7 @@ cp certbot/certs.list config/certbot-certs.list
 cp nginx/default.conf config/nginx-default.conf
 ```
 
-Optionaly set a custom Certbot `cli.ini` on `compose.yml`.
+Optionally set a custom Certbot `cli.ini` on `compose.yml`.
 
 Build and run the containers:
 ```bash
