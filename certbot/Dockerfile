@@ -1,12 +1,12 @@
-FROM python
+FROM python:3.12
 
 RUN apt-get update && apt-get install -y \
     inotify-tools \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pip install \
-	certbot~=2.10.0 \
-	certbot-dns-cloudflare~=2.10.0
+	certbot~=2.11.0 \
+	certbot-dns-cloudflare~=2.11.0
 
 COPY docker-entrypoint.sh /docker-entrypoint.sh
 
