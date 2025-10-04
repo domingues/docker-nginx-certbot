@@ -13,10 +13,11 @@ do
     if [ $? -eq 0 ]
     then
         echo "Detected certs.list change"
+        sleep 0.1
         while IFS= read -r line; do
             if [[ -n "$line" && ! "$line" =~ ^\s*# ]]; then
                 certname="${line%% *}"
-                domains="${line#* }" 
+                domains="${line#* }"
                 command="certbot certonly -n --cert-name \"$certname\" -d \"$domains\""
                 echo "Executing: $command"
                 eval $command

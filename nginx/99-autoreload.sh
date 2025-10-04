@@ -9,6 +9,7 @@ while :; do
     then
         echo "Detected NGINX Configuration Change"
         echo "Executing: nginx -s reload"
+        sleep 0.1
         nginx -s reload
     fi
     sleep 1
