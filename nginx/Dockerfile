@@ -1,4 +1,4 @@
-FROM ubuntu/nginx:1.24-24.04_beta
+FROM ubuntu/nginx:1.26-24.10_edge
 
 RUN rm /etc/nginx/sites-enabled/default
 
